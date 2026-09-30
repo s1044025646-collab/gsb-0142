@@ -1,0 +1,30 @@
+{
+  "name": "room-ir-backend",
+  "version": "1.0.0",
+  "description": "Windows-local indoor acoustic impulse response and reverberation assessment backend (TypeScript/Node/SQLite). Full-band analysis only.",
+  "type": "module",
+  "private": true,
+  "bin": {
+    "acoustic": "dist/cli/index.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "build:test": "tsc -p tsconfig.test.json",
+    "test": "npm run build:test && node --no-warnings --test dist-test/test/*.test.js",
+    "start": "node --no-warnings dist/server/main.js",
+    "dev": "node --experimental-strip-types --no-warnings src/server/main.ts",
+    "cli": "node --no-warnings dist/cli/index.js",
+    "demo": "powershell -ExecutionPolicy Bypass -File scripts/demo.ps1",
+    "stop": "powershell -ExecutionPolicy Bypass -File scripts/stop.ps1"
+  },
+  "engines": {
+    "node": ">=22.5"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^26.6.3"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}

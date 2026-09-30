@@ -1,0 +1,8 @@
+node_modules/
+dist/
+dist-test/
+data/*.sqlite
+data/*.sqlite-*
+tmp/*
+!tmp/.gitkeep
+*.log
