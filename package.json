@@ -1,0 +1,21 @@
+{
+  "name": "ir-reverb-backend",
+  "version": "1.0.0",
+  "description": "Indoor acoustics impulse-response & reverberation evaluation backend (API + CLI + synth IR generator)",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.6.0"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --test \"test/*.test.ts\"",
+    "serve": "node src/cli.ts serve",
+    "demo": "node scripts/demo.ts",
+    "cli": "node src/cli.ts"
+  },
+  "devDependencies": {
+    "@types/node": "*",
+    "typescript": "*"
+  }
+}
